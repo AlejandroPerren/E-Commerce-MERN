@@ -1,14 +1,16 @@
-import './App.css'
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
 
+export default function App() {
   return (
-    <>
-    <div className='text-red-600 '>
-      mernApp
-    </div>
-    </>
-  )
+  <>
+  <Header/>
+  <main>
+    <Outlet/>
+  </main>
+  <Footer/>
+  </>
+  );
 }
-
-export default App
