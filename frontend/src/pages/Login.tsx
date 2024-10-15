@@ -37,7 +37,7 @@ const Login = () => {
             <img src={LoginIcons} alt="login Icono" />
           </div>
 
-          <form className='tp-6' onSubmit={handleSubmit}>
+          <form className='tp-6 flex flex-col gap-2' onSubmit={handleSubmit}>
             <div className='grid'>
               <label>Email:</label>
               <div className='bg-slate-100 p-2'>
