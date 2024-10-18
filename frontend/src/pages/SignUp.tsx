@@ -82,6 +82,7 @@ const Signup = () => {
                   value={data.name}
                   onChange={handleonChange}
                   placeholder='Ingresa Tu Nombre'
+                  required
                   className='w-full h-full outline-none bg-transparent' />
               </div>
             </div>
@@ -95,6 +96,7 @@ const Signup = () => {
                   value={data.email}
                   onChange={handleonChange}
                   placeholder='Ingresa Tu Correo'
+                  required
                   className='w-full h-full outline-none bg-transparent' />
               </div>
             </div>
@@ -107,6 +109,7 @@ const Signup = () => {
                     value={data.password}
                     onChange={handleonChange}
                     placeholder='Ingresa Tu Contraseña'
+                    required
                     className='w-full h-full outline-none bg-transparent' />
                   <div className='cursor-pointer text-xl' onClick={() => setShowPassword((preve) => !preve)}>
                     <span>
@@ -132,6 +135,7 @@ const Signup = () => {
                     value={data.confirmPassword}
                     onChange={handleonChange}
                     placeholder='Ingresa tu Contraseña de nuevo'
+                    required
                     className='w-full h-full outline-none bg-transparent' />
                   <div className='cursor-pointer text-xl' onClick={() => setShowConfirmPassword((preve) => !preve)}>
                     <span>

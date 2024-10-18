@@ -45,6 +45,7 @@ const Login = () => {
                 name='email' 
                 value = {data.email}
                 onChange={handleonChange}
+                required
                 placeholder='ingresa Tu Correo' 
                 className='w-full h-full outline-none bg-transparent' />
               </div>
@@ -56,6 +57,7 @@ const Login = () => {
                 name='password' 
                 value = {data.password}
                 onChange={handleonChange}
+                required
                 placeholder='ingresa Tu Contraseña' 
                 className='w-full h-full outline-none bg-transparent' />
               <div className='cursor-pointer text-xl' onClick={()=>setShowPassword((preve)=>!preve)}>
