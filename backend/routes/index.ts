@@ -7,9 +7,7 @@ const asyncHandler = (fn: (req: Request, res: Response, next: NextFunction) => P
     Promise.resolve(fn(req, res, next)).catch(next);
 };
 
-
-
-
 router.post('/signup', asyncHandler(userSignUpController));
+
 
 export default router;

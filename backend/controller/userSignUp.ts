@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 export const userSignUpController = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { email, password, name } = req.body;
-
+        console.log(req.body)
         if (!email) {
             return res.status(400).json({ message: "Por favor ingresa el Correo", error: true });
         }
