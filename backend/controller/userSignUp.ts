@@ -16,6 +16,11 @@ export const userSignUpController = async (req: Request, res: Response, next: Ne
             return res.status(400).json({ message: "Por favor ingresa tu Nombre", error: true });
         }
 
+        const existingUser = await userModel.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: "El correo ya está en uso", error: true });
+        }
+        
         const salt = await bcrypt.genSalt(10);
         const hashPassword = await bcrypt.hash(password, salt);
 
