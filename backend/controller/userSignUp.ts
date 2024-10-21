@@ -25,9 +25,10 @@ export const userSignUpController = async (req: Request, res: Response, next: Ne
         const hashPassword = await bcrypt.hash(password, salt);
 
         const payload = {
-            email,
+            ...req.body,
+            role : "GENERAL",
             password: hashPassword,
-            name,
+            
         };
 
         const userData = new userModel(payload);
